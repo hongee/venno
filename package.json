@@ -1,0 +1,36 @@
+{
+  "name": "venno",
+  "version": "1.0.0",
+  "description": "A anti-surveillance project.",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack && webpack-dev-server",
+    "dist": "webpack -p",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^7.1.1",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.5.1",
+    "browser-sync": "^2.18.12",
+    "css-loader": "^0.28.3",
+    "eslint": "^3.19.0",
+    "file-loader": "^0.11.1",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.5",
+    "style-loader": "^0.18.1",
+    "stylelint": "^7.10.1",
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "2"
+  },
+  "dependencies": {
+    "cryptico": "^1.0.2",
+    "emoji.json": "^1.2.0",
+    "jquery": "^3.2.1",
+    "uikit": "^3.0.0-beta.24",
+    "vue": "^2.3.3"
+  }
+}

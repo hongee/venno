@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Venno</title>
+    </head>
+    <body>
+      <div class="uk-container">
+        <div class="uk-flex uk-flex-middle uk-flex-center" uk-height-viewport>
+          <div id="crypto" class="uk-card uk-card-default uk-card-hover uk-width-3-4">
+            <div class="uk-card-header">
+              <h2>Ven-no!</h2>
+              <p>Keep your passphrase secret, and tell your friends the public key!</p>
+              <div class="uk-margin">
+                <label class="uk-form-label" for="form-stacked-text">Enter a passphrase</label>
+                <div class="uk-form-controls">
+                    <input class="uk-input" id="form-stacked-text" type="text" placeholder="Some text..." v-model="passphrase">
+                </div>
+              </div>
+
+              <div class="uk-margin">
+                <label class="uk-form-label" for="form-stacked-text">Your Public Key:</label>
+                <div class="uk-form-controls">
+                  <h3>{{ pubkey }}</h3>
+                  <p class="uk-text-break"><em>{{ pubkeystr }}</em></p>
+
+                </div>
+              </div>
+            </div>
+            <div class="uk-card-body">
+              <h5>Sending</h5>
+              <div class="uk-margin">
+                <label class="uk-form-label" for="form-stacked-text">Your friend's public key:</label>
+                <div class="uk-form-controls">
+                    <input class="uk-input" id="form-stacked-text" type="text" placeholder="Some emojis..." v-model="friendspubkey">
+                    <p class="uk-text-break"><em>{{ actualPubKey }}</em></p>
+                </div>
+              </div>
+              <div class="uk-margin">
+                <label class="uk-form-label" for="form-stacked-text">Your message:</label>
+                <div class="uk-form-controls">
+                    <input class="uk-input" id="form-stacked-text" type="text" placeholder="Slice of pizza" v-model="sendMsg">
+                </div>
+              </div>
+              <div class="uk-margin">
+                <label class="uk-form-label" for="form-stacked-text">What to send:</label>
+                <pre>{{ encryptSendMsg }}</pre>
+              </div>
+            </div>
+            <div class="uk-card-footer">
+              <h5>Receiving</h5>
+              <div class="uk-margin">
+                <label class="uk-form-label" for="form-stacked-text">Message you got:</label>
+                <div class="uk-form-controls">
+                    <input class="uk-input" id="form-stacked-text" type="text" placeholder="Ciphertext" v-model="incomingMsg">
+                    <p class="uk-text-break"><em>{{ deciphered }}</em></p>
+                </div>
+              </div>
+              <p>
+                Q: Is this secure?<br />
+                A: NO! This is a class demo for explaining RSA/GPG. There are MANY problems.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="./assets/app.bundle.js"></script>
+    </body>
+</html>
